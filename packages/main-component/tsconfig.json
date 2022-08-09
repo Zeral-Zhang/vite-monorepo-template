@@ -1,0 +1,23 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "outDir": "dist",
+    "allowJs": true
+  },
+  "include": [
+    "vite.config.ts",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
+  ],
+  "references": [
+    {
+      "path": "../component-lib-b"
+    },
+    {
+      "path": "../component-lib-a"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "name": "@zeral/component-lib-a",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "component lib a",
+  "license": "UNLICENSED",
+  "keywords": [
+    "monorepo",
+    "vite"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/component-lib-a.umd.cjs",
+  "module": "./dist/component-lib-a.js",
+  "exports": {
+    ".": {
+      "import": "./dist/component-lib-a.js",
+      "require": "./dist/component-lib-a.cjs"
+    },
+    "./src/index.ts": "./src/index.ts"
+  },
+  "typings": "./dist/src/index.d.ts",
+  "scripts": {
+    "dev": "start-storybook -p 6006",
+    "build": "rimraf -rf lib dist && vite build && vue-tsc --emitDeclarationOnly",
+    "typecheck": "vue-tsc --noEmit",
+    "preview": "vite preview",
+    "build-storybook": "build-storybook"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@storybook/addon-actions": "^6.5.10",
+    "@storybook/addon-essentials": "^6.5.10",
+    "@storybook/addon-interactions": "^6.5.10",
+    "@storybook/addon-links": "^6.5.10",
+    "@storybook/builder-vite": "^0.2.2",
+    "@storybook/testing-library": "^0.0.13",
+    "@storybook/vue3": "^6.5.10",
+    "@vitejs/plugin-vue": "^3.0.0",
+    "babel-loader": "^8.2.5",
+    "vite": "^3.0.0",
+    "vue-loader": "^16.8.3",
+    "vue-tsc": "^0.38.4"
+  },
+  "nx": {
+    "targets": {
+      "build": {
+        "outputs": [
+          "{projectRoot}/dist"
+        ]
+      }
+    }
+  }
+}
