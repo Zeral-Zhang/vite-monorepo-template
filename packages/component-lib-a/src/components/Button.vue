@@ -1,12 +1,20 @@
 <template>
   <button type="button" :class="classes" :style="style" @click="onClick">{{ label }}</button>
+  <a-button type="primary">Primary Button</a-button>
+  <a-button>Default Button</a-button>
+  <a-button type="dashed">Dashed Button</a-button>
+  <a-button type="text">Text Button</a-button>
+  <a-button type="link">Link Button</a-button>
 </template>
 
 <script>
 import { reactive, computed } from 'vue';
+import { Button } from 'ant-design-vue'
+import 'ant-design-vue/lib/button/style/index.css'
 
 export default {
   name: 'MyButton',
+  components: { AButton: Button },
 
   props: {
     label: {

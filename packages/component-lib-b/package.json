@@ -17,24 +17,21 @@
     ".": {
       "import": "./dist/component-lib-b.js",
       "require": "./dist/component-lib-b.cjs"
-    },
-    "./src/index.ts": "./src/index.ts"
+    }
   },
-  "typings": "./dist/src/index.d.ts",
+  "typings": "./dist/types/index.d.ts",
   "scripts": {
     "dev": "start-storybook -p 6006",
     "build": "rimraf -rf lib dist && vite build && vue-tsc --emitDeclarationOnly",
     "typecheck": "vue-tsc --noEmit",
-    "preview": "vite preview",
     "build-storybook": "build-storybook"
   },
   "peerDependencies": {
     "vue": "^3.2.37"
   },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^3.0.0",
-    "vite": "^3.0.0",
-    "vue-tsc": "^0.38.4"
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "nx": {
     "targets": {

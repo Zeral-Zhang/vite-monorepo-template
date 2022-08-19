@@ -2,11 +2,13 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "declaration": true,
+    "declarationDir": "dist/types",
     "outDir": "dist",
     "allowJs": true,
     "composite": true
   },
   "include": [
+    "package.json",
     "vite.config.ts",
     "src/**/*.ts",
     "src/**/*.d.ts",
